@@ -1,0 +1,35 @@
+
+### Model Performance Summary
+
+| Model | MAE | RMSE | R² | Within ±1 | Within ±2 | Exact V | Within ±1 V |
+|-------|-----|------|----|-----------|-----------|---------|-------------|
+| Linear Regression | 2.088 | 2.670 | 0.560 | 30.1% | 55.9% | 25.9% | 64.8% |
+| Ridge Regression | 2.088 | 2.670 | 0.560 | 30.0% | 55.9% | 25.9% | 64.8% |
+| Lasso Regression | 2.089 | 2.672 | 0.559 | 29.9% | 55.9% | 25.9% | 64.8% |
+| Random Forest (Tuned) | 1.846 | 2.375 | 0.652 | 34.8% | 62.4% | 29.6% | 69.7% |
+
+### Key Findings
+
+1. **Tree-based models remain strongest on this structured feature set.**
+   - Random Forest (Tuned) achieves the best overall balance of MAE, RMSE, and grouped V-grade performance.
+   - Linear models remain useful baselines but leave clear nonlinear signal unexplained.
+
+2. **Fine-grained difficulty prediction is meaningfully harder than grouped grade prediction.**
+   - On the held-out test set, the best model is within ±1 fine-grained difficulty score 34.8% of the time.
+   - The same model is within ±1 grouped V-grade 69.7% of the time.
+
+3. **This gap is expected and informative.**
+   - Small numeric errors often stay inside the same or adjacent V-grade buckets.
+   - The model captures broad difficulty bands more reliably than exact score distinctions.
+
+4. **The project’s main predictive takeaway is practical rather than perfect.**
+   - The models are not exact grade replicators.
+   - They are reasonably strong at placing climbs into the correct neighborhood of difficulty.
+
+### Portfolio Interpretation
+
+From a modelling perspective, this project shows:
+- feature engineering grounded in domain structure,
+- comparison of linear and nonlinear models,
+- honest evaluation on a held-out test set,
+- and the ability to translate raw regression performance into climbing-relevant grouped V-grade metrics.
