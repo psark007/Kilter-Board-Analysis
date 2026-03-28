@@ -411,6 +411,21 @@ id  |product_id|name  |x  |y|mirrored_hole_id|mirror_group|
 1137|         1|31,KB1|124|4|               0|           0|
  * 
  * These tell us the coordinates on the board.
+ * Let's see what our range is for the Kilter Board Original
+ */
+
+SELECT 
+    MIN(x) AS x_min,
+    MAX(x) AS x_max,
+    MIN(y) AS y_min,
+    MAX(y) AS y_max
+FROM holes WHERE product_id=1;
+
+/*
+x_min|x_max|y_min|y_max|
+-----+-----+-----+-----+
+  -20|  164|    4|  176|
+ * 
  * 
  * Lastly, let's look at leds.
  */
@@ -780,6 +795,15 @@ AND h.id NOT IN (
 /*
 id|product_id|name|x|y|mirrored_hole_id|mirror_group|
 --+----------+----+-+-+----------------+------------+
+ *
+ * Lastly, the following is important when we wish to visualize hold patterns. We need the edges.
+ */
+SELECT * FROM product_sizes ps WHERE id=28; 
+/*
+id|product_id|edge_left|edge_right|edge_bottom|edge_top|name   |description|image_filename      |position|is_listed|
+--+----------+---------+----------+-----------+--------+-------+-----------+--------------------+--------+---------+
+28|         1|      -24|       168|          0|     156|16 x 12|Super Wide |product_sizes/28.png|       5|        1|
+ * 
  */
 
 ---------------------------------------------------------------
@@ -791,7 +815,3 @@ id|product_id|name|x|y|mirrored_hole_id|mirror_group|
  * - Hold positions are decoded via mapping placements to (x,y) coordinates (from the holes tables)
  * - There are four hold types: start, middle, finish, foot. 692 holds on the Original (16x12)
  */
-
-
-
-
