@@ -91,7 +91,6 @@ Go to your working directory and run notebooks in order:
 
 Note:
 
-* Notebooks 01-03 are uploaded with all of their cells run, so that one can see the data analysis. Notebooks 04-06 are uploaded without having been run.
 * Notebook 03 generates hold difficulty tables
 * Notebook 04 generates feature matrix
 * Notebook 05 trains models
@@ -248,7 +247,7 @@ Here are some relationships between features and difficulty
 ![Correlation Heatmap](images/04_climb_features/feature_correlations.png)
 
 * higher angles allow for harder difficulties
-* distance between holds seems to correlate with difficulty
+* distance between holds seems to relate to difficulty
 * geometric and structural features capture non-trivial climbing patterns
 
 We have a full feature list in [`data/04_climb_features/feature_list.txt`](data/04_climb_features/feature_list.txt). Explanations are available in [`data/04_climb_features/feature_explanations.txt`](data/04_climb_features/feature_explanations.txt).
@@ -337,7 +336,6 @@ The model can still predict subgrades (e.g., V3 contains 6a and 6a+), but it is 
 # Future Work
 
 * Unified grade prediction across boards
-* Combined board analysis
 * Test other models
 * Better spatial features
 * GUI to create climb and instantly tell you a predicted difficulty
