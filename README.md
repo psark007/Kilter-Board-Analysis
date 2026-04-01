@@ -1,3 +1,5 @@
+**Disclaimer**: All the analysis and modelling was done before the great data reset of 2026-03-31 (with data that was updated 2026-01-22). 
+
 # Kilter Board: Predicting Climbing Route Difficulty from Board Data
 
 I recently got into *board climbing*, and I enjoy climbing on the TB2 and the Kilter Board. I've been climbing on 12x12ft boards that are available at my local gym, and I've never felt that the phrase "*it hurts so good*" would be so apt. As such, I've done an in depth analysis of TB2 data <a href="https://gitlab.com/psark/Tension-Board-2-Analysis">here</a>, and have decided to mimic that analysis with available Kilter Board data.
