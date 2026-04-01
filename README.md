@@ -171,7 +171,7 @@ This significantly improves downstream feature quality.
 
 There are many other statistics, see notebooks [`01`](notebooks/01_data_overview_and_climbing_statistics.ipynb) (climbing statistics), [`02`](notebooks/02_hold_analysis_and_board_heatmaps.ipynb) (climbing hold statistics), and [`03`](notebooks/03_hold_difficulty.ipynb) (hold difficulty). Included are:
 
-* **Time-Date analysis** based on `fa_at`. We include month, day of week, and time analysis based on first ascent log data. Winter months are the most popular, and Tuesday and Wednesday are the most popular days of the week.
+* **Time-Date analysis** based on `fa_at`. We include month, day of week, and time analysis based on first ascent log data. Winter months are the most popular, and Tuesday is the most popular days of the week.
 * **Distribution of climbs per angle**, with 40 degrees being the most common.
 * **Distribution of climb quality**, along with the relationship between quality & angle + grade.
 * **"Match" vs "No Match"** analysis (whether or not you can match your hands on a hold). "No match" climbs are fewer, but harder and have more ascensionists
@@ -404,7 +404,7 @@ The script supports the following trained models:
 Example:
 
 ```bash
-python scripts/predict.py --angle 35 --frames 'p304r8p378r6p552r6p564r7p582r5p683r8p686r7' --model random_forest
+python scripts/predict.py --angle 35 --frames 'p1084r15p1146r12p1163r12p1206r15p1214r13p1231r13p1236r13p1242r15p1256r13p1270r13p1307r13p1324r13p1361r13p1395r14' --model random_forest
 ```
 
 Example output:
@@ -421,7 +421,7 @@ Example output:
 You can also use the neural network:
 
 ```bash
-python scripts/predict.py --angle 40 --frames 'p344r5p348r8p352r5p362r6p366r8p367r8p369r6p371r6p372r7p379r8p382r6p386r8p388r8p403r8p603r7p615r6p617r6' --model nn
+python scripts/predict.py --angle 40 --frames 'p1084r15p1094r12p1163r12p1231r13p1236r13p1256r13p1270r13p1324r13p1361r13p1395r14p1498r15p1499r15' --model nn
 ```
 
 ### Batch prediction from CSV
@@ -442,8 +442,8 @@ The same script can run predictions for an entire CSV file.
 
 ```csv
 angle,frames,is_nomatch,description
-40,p344r5p348r8p352r5p362r6,0,
-35,p304r8p378r6p552r6p564r7,1,no matching
+40,p1131r15p1168r12p1169r12p1237r13p1287r13p1300r13p1385r14,0,
+35,p1171r15p1208r15p1239r12p1289r12p1302r13p1353r13p1384r14p1389r15,1,no matching
 ```
 
 #### Run batch prediction
@@ -483,7 +483,7 @@ from scripts.predict import predict
 
 result = predict(
     angle=40,
-    frames="p344r5p348r8p352r5p362r6",
+    frames="p1131r15p1168r12p1169r12p1237r13p1287r13p1300r13p1385r14",
     model_name="random_forest"
 )
 
