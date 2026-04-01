@@ -171,12 +171,11 @@ This significantly improves downstream feature quality.
 
 There are many other statistics, see notebooks [`01`](notebooks/01_data_overview_and_climbing_statistics.ipynb) (climbing statistics), [`02`](notebooks/02_hold_analysis_and_board_heatmaps.ipynb) (climbing hold statistics), and [`03`](notebooks/03_hold_difficulty.ipynb) (hold difficulty). Included are:
 
-* **Time-Date analysis** based on `fa_at`. We include month, day of week, and time analysis based on first ascent log data. Winter months are the most popular, and Tuesday is the most popular days of the week.
+* **Time-Date analysis** based on `fa_at`. We include month, day of week, and time analysis based on first ascent log data. Winter months are the most popular, and Tuesday is the most popular day of the week.
 * **Distribution of climbs per angle**, with 40 degrees being the most common.
 * **Distribution of climb quality**, along with the relationship between quality & angle + grade.
 * **"Match" vs "No Match"** analysis (whether or not you can match your hands on a hold). "No match" climbs are fewer, but harder and have more ascensionists
 * **Prolific statistics**: most popular routes & setters
-* **Plastic vs wood** hold analysis
 * **Per-Angle, Per-Grade** hold frequency & difficulty analyses
 * more!
 
