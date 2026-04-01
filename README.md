@@ -411,9 +411,9 @@ Example output:
 
 ```python
 {
-    'predicted_numeric': 14.27,
-    'predicted_display_difficulty': 14,
-    'predicted_boulder_grade': '5b/V1',
+    'predicted_numeric': 16.4272248633235,
+    'predicted_display_difficulty': 16,
+    'predicted_boulder_grade': '6a/V3',
     'model': 'random_forest'
 }
 ```
